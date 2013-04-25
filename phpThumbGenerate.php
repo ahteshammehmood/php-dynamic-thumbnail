@@ -2,16 +2,14 @@
 
 /**
  * Thumbnail Generator (PHP)
+ * @version 1.1
  * @since April 24, 2013
  *
  * This script is originally written by Ronald Nicholls
  * http://www.onextrapixel.com/2011/02/25/creating-dynamic-image-thumbnails-using-php/
  */
 
-function generateThumbnail($source, $dest, $nw, $nh){
-	// Get the file type of source image
-	$stype = explode(".", $source);
-	$stype = $stype[count($stype)-1];
+function generateThumbnail($source, $dest, $stype, $nw, $nh){
 
 	// Get the dimension of source image
 	$size = getimagesize($source);
@@ -20,15 +18,15 @@ function generateThumbnail($source, $dest, $nw, $nh){
 
 	// Select the right image library for the filetype
 	switch ($stype) {
-		case 'gif':
+		case 'image/gif':
     	$simg = imagecreatefromgif($source);
     	break;
 
-    	case 'jpg':
+    	case 'image/jpeg':
     	$simg = imagecreatefromjpeg($source);
     	break;
 
-    	case 'png':
+    	case 'image/png':
     	$simg = imagecreatefrompng($source);
     	break;
 	}
@@ -101,5 +99,3 @@ function generateThumbnail($source, $dest, $nw, $nh){
 
 	imagejpeg($dimg,$dest,100);
 }
-
-generateThumbnail("input.jpg", "output.jpg", 100, 100);
