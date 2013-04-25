@@ -20,8 +20,9 @@ generateThumbnail("input.jpg", "output.jpg", "image/jpeg", 100, 100);
 version log
 ===========
 
-2013-04-25: Version 1.1: New parameter ($image_mimetype) added to the function \n
-                         Example Added
+2013-04-25: Version 1.1: 
+- New parameter ($image_mimetype) added to the function 
+- Example Added
 
 2013-04-24: Version 1.0: Initial Release
 
