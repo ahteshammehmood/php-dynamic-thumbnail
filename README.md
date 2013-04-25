@@ -10,9 +10,18 @@ http://www.onextrapixel.com/2011/02/25/creating-dynamic-image-thumbnails-using-p
 usage
 =====
 
-generateThumbnail($source_file, $destination_file, $new_width, $new_height);
+generateThumbnail($source_file, $destination_file, $image_mimetype, $new_width, $new_height);
 
 example
 =======
 
-generateThumbnail("input.jpg", "output.jpg", 100, 100);
+generateThumbnail("input.jpg", "output.jpg", "image/jpeg", 100, 100);
+
+version log
+===========
+
+2013-04-25: Version 1.1: New parameter ($image_mimetype) added to the function
+            Example Added
+
+2013-04-24: Version 1.0: Initial Release
+
