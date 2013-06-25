@@ -2,7 +2,7 @@
 /** 
  * phpDynamicThumbnailGenerate
  * @author Ali Haris (http://github.com/aliharis)
- * @since Aptil 25, 2013 : 11:10
+ * @since April 25, 2013 : 11:10
  */
 ?>
 <!DOCTYPE html>
